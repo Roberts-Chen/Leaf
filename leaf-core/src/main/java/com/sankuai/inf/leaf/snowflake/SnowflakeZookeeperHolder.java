@@ -188,6 +188,7 @@ public class SnowflakeZookeeperHolder {
      */
     private void updateLocalWorkerID(int workerID) {
         File leafConfFile = new File(PROP_PATH.replace("{port}", port));
+        LOGGER.info("updating local worker id from file {}", leafConfFile.getAbsolutePath());
         boolean exists = leafConfFile.exists();
         LOGGER.info("file exists status is {}", exists);
         if (exists) {
